@@ -1,0 +1,98 @@
+@font-face {
+    font-family: digital-7;
+    src: url(digital-7/digital-7mono.ttf);
+}
+
+.contenido {
+    max-width: 960px;
+    margin: auto;    
+}
+
+legend {
+    font-weight: bold;
+}
+
+fieldset {
+    width: 60%;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.input {
+    font-weight: bold;
+    font-size: 1.4em;
+    width: 150px;
+}
+
+/*Reloj*/
+#hora {
+    color: red;
+    font-family: digital-7;
+    font-size: 8em;
+    text-align: center;
+}
+
+#fecha {
+    color: red;
+    font-family: digital-7;
+    font-size: 6em;
+    text-align: center;
+}
+
+/*Coordenadas*/
+#divcoord {
+    display: flex;
+}
+
+#divcoord input {
+    margin-left: 0.5em;
+    margin-right: 1em;
+}
+
+/*Perímetro*/
+#divperim {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 150px;
+    grid-row-gap: 5px;
+}
+
+/*Paneles*/
+#paneles {
+    display: grid;
+    grid-template-columns: 150px 300px;
+    grid-row-gap: 5px;
+}
+
+.span2 {
+    grid-column: span 2;
+}
+
+/*Calculadora*/
+#divCalcu {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 150px 50px 150px;
+    grid-row-gap: 5px;
+    column-gap: 0.5em;
+}
+
+#oper {
+    width: fit-content;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+#calcularCalcu, #limpiarCalcu {
+    width: auto;
+    font-weight: bold;
+    font-size: large;
+    grid-column: 1 / span 3;
+}
+
+#result {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 260px;
+    grid-row-gap: 5px;
+}
