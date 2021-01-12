@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", () =>{
     const mostrarHora = () =>{
         let fecha = new Date();
         let diaMes = fecha.getDate();
-        let mes = fecha.getMonth();
+        let mes = fecha.getMonth()+1;
         let anno = fecha.getFullYear();
         let hora = fecha.getHours();
         let min = fecha.getMinutes();
