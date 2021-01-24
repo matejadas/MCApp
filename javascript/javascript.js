@@ -90,6 +90,7 @@ window.addEventListener("DOMContentLoaded", () =>{
         let numBloques = null;
         let panResultantes = null;
         
+        // Sólo se pueden crear paneles en lotes de 16. Por tanto deberemos crear un número de paneles múltiplo de 16
         for (let i=0; numBloques === null; i++){
             if((Number(numUsuario) + Number(i)) % 16 === 0){
                 numBloques = ((Number(numUsuario) + Number(i)) * 6) / 16;
@@ -97,6 +98,13 @@ window.addEventListener("DOMContentLoaded", () =>{
             }
         }
         return [numBloques, panResultantes];
+    }
+
+    function calcuFaroles(numUsuario){
+        let numPepitas = numUsuario * 8;        
+        let numLingotes = Math.ceil(numPepitas / 9);
+
+        return[numLingotes, numPepitas];
     }
     
     // Acciones
@@ -119,6 +127,13 @@ window.addEventListener("DOMContentLoaded", () =>{
             document.getElementById("bloqNeces").value = paneles[0];
             document.getElementById("panResultantes").value = paneles[1];
         }
+        else if(ev.target.matches("#farUsuario")) {
+            let faroles = calcuFaroles(document.getElementById("farUsuario").value);
+
+            document.getElementById("lingNecesarios").value = faroles[0];
+            document.getElementById("pepNecesarias").value = faroles[1];
+            document.getElementById("antNecesarias").value = document.getElementById("farUsuario").value;
+        }
     });
 
     document.addEventListener("click", ev => {
@@ -138,6 +153,8 @@ window.addEventListener("DOMContentLoaded", () =>{
         else if(ev.target.matches("#limpiarCalcu")){
             limpiarCalcu();
         }
-        else if(ev.target.matches("#calcularCalcu")) document.getElementById("resultCalcu").value = calcular(operacion);
+        else if(ev.target.matches("#calcularCalcu")){
+            document.getElementById("resultCalcu").value = calcular(operacion);    
+        }
     });
 });

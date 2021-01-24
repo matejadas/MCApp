@@ -68,6 +68,13 @@ fieldset {
     grid-column: span 2;
 }
 
+/*Faroles*/
+#faroles {
+    display: grid;
+    grid-template-columns: 450px;
+    grid-row-gap: 5px;
+}
+
 /*Calculadora*/
 #divCalcu {
     display: grid;
