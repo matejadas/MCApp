@@ -102,8 +102,17 @@ legend {
         grid-template-columns: repeat(4, 25%);
     }
 
-    #tagOver, #tagNeth {
+    .tag {
         grid-column: 1 / span 4;
+        grid-row: 1;
+    }
+
+    .tagX, .tagY, .tagZ {
+        grid-row: 2;
+    }
+
+    .tag > input {
+        grid-row: 3;
     }
 
 }
