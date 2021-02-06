@@ -27,12 +27,6 @@ legend {
     text-align: center;
 }
 
-/*Coordenadas, general*/
-#divcoord input {
-    margin-left: 0.5em;
-    margin-right: 1em;
-}
-
 /*Perímetro, general*/
 #divperim {
     display: grid;
@@ -59,6 +53,31 @@ legend {
     grid-row-gap: 5px;
 }
 
+/*Coordenadas*/
+#over {
+    display: grid;
+    grid-template-columns: repeat(3, 18%);
+}
+
+#neth {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 18%);
+}
+
+.tag {
+    grid-column: 1 / span 3;
+    grid-row: 1;
+}
+
+.tagX, .tagY, .tagZ {
+    grid-row: 2;
+}
+
+.tag > input {
+    grid-row: 3;
+}
+
 /*Horizontal, escritorio*/
 @media(orientation: landscape){
     
@@ -72,18 +91,6 @@ legend {
     .input {
         width: 150px;
     }
-
-    /*Coordenadas*/
-    #over {
-        display: grid;
-        grid-template-columns: repeat(4, 18%);
-    }
-
-    #neth {
-        display: grid;
-        grid-template-columns: repeat(4, 18%);
-    }
-
 }
 
 /*Vertical, móviles*/
@@ -94,32 +101,8 @@ legend {
         padding-right: 5px;
     }
 
-    .input {
+    #divcoord .input {
         width: 100%;
-    }
-
-    /*Coordenadas*/
-    #over {
-        display: grid;
-        grid-template-columns: repeat(3, 33%);
-    }
-
-    #neth {
-        display: grid;
-        grid-template-columns: repeat(3, 33%);
-    }
-
-    .tag {
-        grid-column: 1 / span 3;
-        grid-row: 1;
-    }
-
-    .tagX, .tagY, .tagZ {
-        grid-row: 2;
-    }
-
-    .tag > input {
-        grid-row: 3;
     }
 
 }
