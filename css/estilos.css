@@ -2,7 +2,6 @@
     font-family: digital-7;
     src: url(digital-7/digital-7mono.ttf);
 }
-
 legend {
     font-weight: bold;
 }
@@ -27,14 +26,6 @@ legend {
     text-align: center;
 }
 
-/*Perímetro, general*/
-#divperim {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 100px 150px;
-    grid-row-gap: 5px;
-}
-
 /*Coordenadas*/
 .tag {
     grid-column: 1 / span 3;
@@ -47,6 +38,14 @@ legend {
 
 .tag > input {
     grid-row: 3;
+}
+
+/*Perímetro, general*/
+#divperim {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 150px;
+    grid-row-gap: 5px;
 }
 
 /*Calculadora*/
@@ -80,7 +79,11 @@ legend {
 
 /*Horizontal, escritorio*/
 @media(orientation: landscape){
-    
+    body {
+        width: 70%;
+        margin: 0 auto;
+    }
+
     /*Coordenadas*/
     #over {
         display: grid;
@@ -93,11 +96,16 @@ legend {
         grid-template-columns: repeat(3, 18%);
     }
 
-    /*Reloj*/
-    fieldset, #hora, #fecha {
-        width: 60%;
-        margin: auto;
-        margin-top: 5px;
+    /*Coordenadas y perímetro*/
+    #coordPer {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    /*Fabricación*/
+    #fabricacion {
+        display: grid;
+        grid-template-columns: 50% 50%;
     }
 
     .input {
