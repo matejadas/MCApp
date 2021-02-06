@@ -3,19 +3,8 @@
     src: url(digital-7/digital-7mono.ttf);
 }
 
-.contenido {
-    max-width: 960px;
-    margin: auto;    
-}
-
 legend {
     font-weight: bold;
-}
-
-fieldset {
-    width: 60%;
-    margin: auto;
-    margin-top: 5px;
 }
 
 .input {
@@ -28,28 +17,24 @@ fieldset {
 #hora {
     color: red;
     font-family: digital-7;
-    font-size: 8em;
+    font-size: 5em;
     text-align: center;
 }
 
 #fecha {
     color: red;
     font-family: digital-7;
-    font-size: 6em;
+    font-size: 5em;
     text-align: center;
 }
 
-/*Coordenadas*/
-#divcoord {
-    display: flex;
-}
-
+/*Coordenadas, general*/
 #divcoord input {
     margin-left: 0.5em;
     margin-right: 1em;
 }
 
-/*Perímetro*/
+/*Perímetro, general*/
 #divperim {
     display: grid;
     align-items: center;
@@ -73,6 +58,51 @@ fieldset {
     display: grid;
     grid-template-columns: 450px;
     grid-row-gap: 5px;
+}
+
+/*Horizontal, escritorio*/
+@media(orientation: landscape){
+    
+    /*Reloj*/
+    fieldset, #hora, #fecha {
+        width: 60%;
+        margin: auto;
+        margin-top: 5px;
+    }
+
+    /*Coordenadas*/
+    #over {
+        display: grid;
+        grid-template-columns: repeat(4, 18%);
+    }
+
+    #neth {
+    display: grid;
+    grid-template-columns: repeat(4, 18%);
+    }
+
+}
+
+/*Vertical, móviles*/
+@media(orientation: portrait){
+    
+    /*Reloj*/
+    /*fieldset, #hora, #fecha {
+        width: 100%;
+        margin-top: 5px;
+    }*/
+
+    /*Coordenadas*/
+    #over {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+    }
+
+    #neth {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    }
+
 }
 
 /*Calculadora*/

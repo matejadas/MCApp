@@ -8,82 +8,80 @@
     <title>Utilidades Minecraft</title>
 </head>
 <body>
-    <div class="contenido">
-        <div id="hora"></div>
-        <div id="fecha"></div>
-            <fieldset id="coord">
-                <legend>Coordenadas</legend>
-                <div id="divcoord">
-                    <div id="over">
-                        Overworld:<br>
-                        X:<input type="number" id="owx" class="input"><br>
-                        Y:<input type="number" id="owy" class="input"><br>
-                        Z:<input type="number" id="owz" class="input"><br>
-                    </div>
-                    <div id="neth">
-                        Nether:<br>
-                        X:<input type="number" id="nx" class="input"><br>
-                        Y:<input type="number" id="ny" class="input"><br>
-                        Z:<input type="number" id="nz" class="input"><br>
-                    </div>
+    <div id="hora"></div>
+    <div id="fecha"></div>
+        <fieldset id="coord">
+            <legend>Coordenadas</legend>
+            <div id="divcoord">
+                <div id="over">
+                    Overworld:<br>
+                    <p>X:<input type="number" id="owx" class="input"></p>
+                    <p>Y:<input type="number" id="owy" class="input"></p>
+                    <p>Z:<input type="number" id="owz" class="input"></p>
                 </div>
-            </fieldset>
-            <fieldset id="perimetro">
-                <legend>Perímetro y área</legend>
-                <p>Para los perímetros y las áreas se supone un área rectangular o cuadrada.</p>
-                <div id="divperim" class="grid-container">
-                    <div class="grid-item">Largo:</div>
-                    <div class="grid-item"><input type="number" id="largo" class="input"></div>
-                    <div class="grid-item">Ancho:</div>
-                    <div class="grid-item"><input type="number" id="ancho" class="input"></div>
-                    <div class="grid-item btnCalcularPer"><input type="button" id="calcularPer" value="Calcular" class="btn-success"></div>
-                    <div class="grid-item btnLimpiarPer"><input type="button" id="limpiarPer" value="Limpiar" class="btn-warning"></div>
+                <div id="neth">
+                    Nether:<br>
+                    <p>X:<input type="number" id="nx" class="input"></p>
+                    <p>Y:<input type="number" id="ny" class="input"></p>
+                    <p>Z:<input type="number" id="nz" class="input"></p>
                 </div>
-                <p>
-                    <div id="result"></div>
-                </p>
-            </fieldset>
-            <fieldset>
-                <legend>Fabricación - Paneles</legend>
-                <p>Los paneles se fabrican en lotes de 16. Para un lote de 16 hacen falta 6 bloques de cristal.</p>
-                <div id="paneles">
-                    <div class="grid-item">Paneles requeridos: </div>
-                    <div class="grid-item"><input type="number" id="panUsuario" class="number input"></div>
-                    <div class="grid-item span2">Son necesarios: </div>
-                    <div class="grid-item span2"><input type="number" id="bloqNeces" class="input" readonly> bloques para</div>
-                    <div class="grid-item span2"><input type="number" id="panResultantes" class="input" readonly> paneles.</div>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Fabricación - Faroles</legend>
-                <p>Los faroles requieren 8 pepitas de hierro y una antorcha. Un lingote de hierro nos da 9 pepitas.</p>
-                <div id="faroles">
-                    <div class="grid-item">Para <input type="number" id="farUsuario" class="number input"> faroles</div>
-                    <div class="grid-item">son necesarios: </div>
-                    <div class="grid-item"><input type="number" id="lingNecesarios" class="input" readonly> lingotes de hierro para</div>
-                    <div class="grid-item"><input type="number" id="pepNecesarias" class="input" readonly> pepitas, y</div>
-                    <div class="grid-item"><input type="number" id="antNecesarias" class="input" readonly> antorchas.</div>
-                </div>
-            </fieldset>
-            <fieldset id="calcu">
-                <legend>Calculadora</legend>
-                <div id="divCalcu">
-                    <input type="number" id="calcu1" class="input">
-                    <select id="oper">
-                        <option value="+">+</option>
-                        <option value="-">-</option>
-                        <option selected value="*">*</option>
-                        <option value="/">/</option>
-                    </select>
-                    <input type="number" id="calcu2" class="input">
-                    <input type="button" id="calcularCalcu" value="=" class="btn-success">
-                    <input type="number" id="resultCalcu" class="input">
-                    <input type="button" id="limpiarCalcu" value="CE" class="btn-warning">
-                </div>
-            </fieldset>
-        <script src="javascript/jquery-3.5.1.min.js"></script>
-        <script src="javascript/bootstrap.min.js"></script>
-        <script src="javascript/javascript.js"></script>
-    </div>
+            </div>
+        </fieldset>
+        <fieldset id="perimetro">
+            <legend>Perímetro y área</legend>
+            <p>Para los perímetros y las áreas se supone un área rectangular o cuadrada.</p>
+            <div id="divperim" class="grid-container">
+                <div class="grid-item">Largo:</div>
+                <div class="grid-item"><input type="number" id="largo" class="input"></div>
+                <div class="grid-item">Ancho:</div>
+                <div class="grid-item"><input type="number" id="ancho" class="input"></div>
+                <div class="grid-item btnCalcularPer"><input type="button" id="calcularPer" value="Calcular" class="btn-success"></div>
+                <div class="grid-item btnLimpiarPer"><input type="button" id="limpiarPer" value="Limpiar" class="btn-warning"></div>
+            </div>
+            <p>
+                <div id="result"></div>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Fabricación - Paneles</legend>
+            <p>Los paneles se fabrican en lotes de 16. Para un lote de 16 hacen falta 6 bloques de cristal.</p>
+            <div id="paneles">
+                <div class="grid-item">Paneles requeridos: </div>
+                <div class="grid-item"><input type="number" id="panUsuario" class="number input"></div>
+                <div class="grid-item span2">Son necesarios: </div>
+                <div class="grid-item span2"><input type="number" id="bloqNeces" class="input" readonly> bloques para</div>
+                <div class="grid-item span2"><input type="number" id="panResultantes" class="input" readonly> paneles.</div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Fabricación - Faroles</legend>
+            <p>Los faroles requieren 8 pepitas de hierro y una antorcha. Un lingote de hierro nos da 9 pepitas.</p>
+            <div id="faroles">
+                <div class="grid-item">Para <input type="number" id="farUsuario" class="number input"> faroles</div>
+                <div class="grid-item">son necesarios: </div>
+                <div class="grid-item"><input type="number" id="lingNecesarios" class="input" readonly> lingotes de hierro para</div>
+                <div class="grid-item"><input type="number" id="pepNecesarias" class="input" readonly> pepitas, y</div>
+                <div class="grid-item"><input type="number" id="antNecesarias" class="input" readonly> antorchas.</div>
+            </div>
+        </fieldset>
+        <fieldset id="calcu">
+            <legend>Calculadora</legend>
+            <div id="divCalcu">
+                <input type="number" id="calcu1" class="input">
+                <select id="oper">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option selected value="*">*</option>
+                    <option value="/">/</option>
+                </select>
+                <input type="number" id="calcu2" class="input">
+                <input type="button" id="calcularCalcu" value="=" class="btn-success">
+                <input type="number" id="resultCalcu" class="input">
+                <input type="button" id="limpiarCalcu" value="CE" class="btn-warning">
+            </div>
+        </fieldset>
+    <script src="javascript/jquery-3.5.1.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/javascript.js"></script>
 </body>
 </html>
