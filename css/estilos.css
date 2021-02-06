@@ -136,9 +136,24 @@ legend {
     }
 
     /*Paneles*/
-    #paneles{
+    #paneles {
         display: grid;
         grid-template-columns: 50% 50%;
     }
+
+    #paneles input {
+        width: 150px;
+    }
+
+    #faroles {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    #faroles input {
+        width: 150px;
+    }
+
+
 
 }
