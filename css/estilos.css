@@ -10,7 +10,6 @@ legend {
 .input {
     font-weight: bold;
     font-size: 1.4em;
-    width: 150px;
 }
 
 /*Reloj*/
@@ -70,6 +69,10 @@ legend {
         margin-top: 5px;
     }
 
+    .input {
+        width: 150px;
+    }
+
     /*Coordenadas*/
     #over {
         display: grid;
@@ -91,19 +94,23 @@ legend {
         padding-right: 5px;
     }
 
+    .input {
+        width: 33%;
+    }
+
     /*Coordenadas*/
     #over {
         display: grid;
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(3, 33%);
     }
 
     #neth {
         display: grid;
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(3, 33%);
     }
 
     .tag {
-        grid-column: 1 / span 4;
+        grid-column: 1 / span 3;
         grid-row: 1;
     }
 
