@@ -35,25 +35,12 @@ legend {
     grid-row-gap: 5px;
 }
 
-/*Paneles*/
-#paneles {
-    display: grid;
-    grid-template-columns: 150px 300px;
-    grid-row-gap: 5px;
-}
-
-.span2 {
-    grid-column: span 2;
-}
-
 /*Faroles*/
 #faroles {
     display: grid;
     grid-template-columns: 450px;
     grid-row-gap: 5px;
 }
-
-
 
 .tag {
     grid-column: 1 / span 3;
@@ -66,6 +53,35 @@ legend {
 
 .tag > input {
     grid-row: 3;
+}
+
+/*Calculadora*/
+#divCalcu {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 150px 50px 150px;
+    grid-row-gap: 5px;
+    column-gap: 0.5em;
+}
+
+#oper {
+    width: fit-content;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+#calcularCalcu, #limpiarCalcu {
+    width: auto;
+    font-weight: bold;
+    font-size: large;
+    grid-column: 1 / span 3;
+}
+
+#result {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 100px 260px;
+    grid-row-gap: 5px;
 }
 
 /*Horizontal, escritorio*/
@@ -119,50 +135,10 @@ legend {
         width: 100%;
     }
 
-    #divperim .input {
-        width: 66%;
+    /*Paneles*/
+    #paneles, #faroles {
+        display: grid;
+        grid-template-columns: 90%;
     }
 
-    #paneles .input {
-        width: 66%;
-    }
-
-    #faroles .input {
-        width: 66%;
-    }
-
-    #divCalcu .input {
-        width: 66%;
-    }
-
-
-}
-
-/*Calculadora*/
-#divCalcu {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 150px 50px 150px;
-    grid-row-gap: 5px;
-    column-gap: 0.5em;
-}
-
-#oper {
-    width: fit-content;
-    font-weight: bold;
-    font-size: 1.6em;
-}
-
-#calcularCalcu, #limpiarCalcu {
-    width: auto;
-    font-weight: bold;
-    font-size: large;
-    grid-column: 1 / span 3;
-}
-
-#result {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 100px 260px;
-    grid-row-gap: 5px;
 }
