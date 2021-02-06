@@ -86,11 +86,10 @@ legend {
 /*Vertical, móviles*/
 @media(orientation: portrait){
     
-    /*Reloj*/
-    /*fieldset, #hora, #fecha {
-        width: 100%;
-        margin-top: 5px;
-    }*/
+    fieldset {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
     /*Coordenadas*/
     #over {
@@ -101,6 +100,10 @@ legend {
     #neth {
     display: grid;
     grid-template-columns: repeat(4, 25%);
+    }
+
+    #tagOver, #tagNeth {
+        column-span: all;
     }
 
 }
