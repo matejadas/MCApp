@@ -119,9 +119,22 @@ legend {
         width: 100%;
     }
 
-    :not(#divcoord) .input {
+    #divperim .input {
         width: 66%;
     }
+
+    #paneles .input {
+        width: 66%;
+    }
+
+    #faroles .input {
+        width: 66%;
+    }
+
+    #divCalcu .input {
+        width: 66%;
+    }
+
 
 }
 
