@@ -35,13 +35,7 @@ legend {
     grid-row-gap: 5px;
 }
 
-/*Faroles*/
-#faroles {
-    display: grid;
-    grid-template-columns: 450px;
-    grid-row-gap: 5px;
-}
-
+/*Coordenadas*/
 .tag {
     grid-column: 1 / span 3;
     grid-row: 1;
@@ -135,10 +129,16 @@ legend {
         width: 100%;
     }
 
+    /*Perímetro*/
+    #divperim input {
+        width: 70%;
+    }
+
     /*Paneles*/
     #paneles {
         display: grid;
         grid-template-columns: 50% 50%;
+        grid-row-gap: 5px;
     }
 
     #paneles input {
@@ -148,6 +148,7 @@ legend {
     #faroles {
         display: grid;
         grid-template-columns: 50% 50%;
+        grid-row-gap: 5px;
     }
 
     #faroles input {
