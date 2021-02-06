@@ -53,17 +53,7 @@ legend {
     grid-row-gap: 5px;
 }
 
-/*Coordenadas*/
-#over {
-    display: grid;
-    grid-template-columns: repeat(3, 18%);
-}
 
-#neth {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 18%);
-}
 
 .tag {
     grid-column: 1 / span 3;
@@ -81,6 +71,18 @@ legend {
 /*Horizontal, escritorio*/
 @media(orientation: landscape){
     
+    /*Coordenadas*/
+    #over {
+        display: grid;
+        grid-template-columns: repeat(3, 18%);
+    }
+
+    #neth {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 18%);
+    }
+
     /*Reloj*/
     fieldset, #hora, #fecha {
         width: 60%;
@@ -96,6 +98,18 @@ legend {
 /*Vertical, móviles*/
 @media(orientation: portrait){
     
+    /*Coordenadas*/
+    #over {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+    }
+
+    #neth {
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+    }
+
     fieldset {
         padding-left: 5px;
         padding-right: 5px;
@@ -103,6 +117,10 @@ legend {
 
     #divcoord .input {
         width: 100%;
+    }
+
+    :not(#divcoord) .input {
+        width: 66%;
     }
 
 }
