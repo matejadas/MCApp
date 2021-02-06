@@ -24,7 +24,7 @@ legend {
 #fecha {
     color: red;
     font-family: digital-7;
-    font-size: 5em;
+    font-size: 3em;
     text-align: center;
 }
 
@@ -77,8 +77,8 @@ legend {
     }
 
     #neth {
-    display: grid;
-    grid-template-columns: repeat(4, 18%);
+        display: grid;
+        grid-template-columns: repeat(4, 18%);
     }
 
 }
@@ -98,12 +98,12 @@ legend {
     }
 
     #neth {
-    display: grid;
-    grid-template-columns: repeat(4, 25%);
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
     }
 
     #tagOver, #tagNeth {
-        column-span: all;
+        grid-column: 1 / span 4;
     }
 
 }
