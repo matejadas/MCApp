@@ -21,6 +21,11 @@ legend {
     background-color: silver;
 }
 
+.icon {
+    height: 35px;
+    padding-left: 5px;
+}
+
 /*Reloj*/
 #hora {
     color: red;
@@ -92,11 +97,6 @@ legend {
     body {
         width: 70%;
         margin: 0 auto;
-    }
-
-    .icon {
-        height: 35px;
-        padding-left: 5px;
     }
 
     /*Coordenadas*/
