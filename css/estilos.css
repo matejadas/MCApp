@@ -1,14 +1,24 @@
 @font-face {
     font-family: digital-7;
-    src: url(digital-7/digital-7mono.ttf);
+    src: url(../fonts/digital-7/digital-7mono.ttf);
 }
+
+@font-face {
+    font-family: minecraft;
+    src: url(../fonts/minecraft/minecraft.ttf);
+}
+
 legend {
-    font-weight: bold;
+    font-family: minecraft;
 }
 
 .input {
     font-weight: bold;
     font-size: 1.4em;
+}
+
+.input[readonly] {
+    background-color: silver;
 }
 
 /*Reloj*/
@@ -84,6 +94,11 @@ legend {
         margin: 0 auto;
     }
 
+    .icon {
+        height: 35px;
+        padding-left: 5px;
+    }
+
     /*Coordenadas*/
     #over {
         display: grid;
@@ -98,14 +113,25 @@ legend {
 
     /*Coordenadas y perímetro*/
     #coordPer {
+        margin-bottom: 10px;
         display: grid;
         grid-template-columns: 50% 50%;
     }
 
     /*Fabricación*/
     #fabricacion {
+        margin-bottom: 10px;
         display: grid;
         grid-template-columns: 50% 50%;
+    }
+
+    #paneles, #faroles {
+        display: grid;
+        grid-template-columns: 33% 33%;
+    }
+
+    #paneles .icon {
+        justify-items: start;
     }
 
     .input {
@@ -115,6 +141,10 @@ legend {
 
 /*Vertical, móviles*/
 @media(orientation: portrait){
+
+    #hora, #fecha {
+        visibility: hidden;
+    }
     
     /*Coordenadas*/
     #over {
@@ -162,7 +192,4 @@ legend {
     #faroles input {
         width: 150px;
     }
-
-
-
 }
