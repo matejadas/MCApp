@@ -94,6 +94,16 @@ body h1 {
   font-weight: normal;
 }
 
+body input[type=number] {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+body input[readonly] {
+  background-color: darkgray;
+}
+
 /*Reloj*/
 #hora {
   color: red;
