@@ -17,20 +17,8 @@ window.addEventListener("DOMContentLoaded", () =>{
     const multiplicarCoord = (valor) => valor*8;
     const perimetro = (v1, v2) => ((v1*2) + (v2*2)) - 4;
     const area = (v1, v2) => v1*v2;
-    const sumarCalcu = (v1, v2) => Number(v1) + Number(v2);
-    const restarCalcu = (v1, v2) => v1 - v2;
-    const multiCalcu = (v1, v2) => v1 * v2;
-    const dividirCalcu = (v1, v2) => {
-        let ret;
-        if (v2 != 0){
-            ret = v1 / v2;
-        } else {
-            ret = "No se puede dividir entre 0";
-        }
 
-        return ret;
-    };
-
+    // Forzamos al reloj a mostrar siempre 2 cifras
     function pad2(number) {   
         return (number < 10 ? '0' : '') + number  
     }
@@ -61,29 +49,6 @@ window.addEventListener("DOMContentLoaded", () =>{
         document.getElementById("ancho").value = "";
         document.getElementById("per").value = "";
         document.getElementById("area").value = "";
-    }
-
-    function limpiarCalcu(){
-        document.getElementById("calcu1").value = "";
-        document.getElementById("calcu2").value = "";
-        document.getElementById("resultCalcu").value = "";
-    }
-
-    function calcular(oper){
-        let v1 = document.getElementById("calcu1").value;
-        let v2 = document.getElementById("calcu2").value;
-        let ret;
-        if(oper === "+"){
-            ret = document.getElementById("resultCalcu").value = sumarCalcu(v1, v2);
-        } else if(oper === "-"){
-            ret = document.getElementById("resultCalcu").value = restarCalcu(v1, v2);
-        } else if(oper === "*"){
-            ret = document.getElementById("resultCalcu").value = multiCalcu(v1, v2);
-        } else if(oper === "/"){
-            ret = document.getElementById("resultCalcu").value = dividirCalcu(v1, v2);
-        }
-
-        return ret;
     }
 
     function calcuPaneles(numUsuario) {
@@ -137,7 +102,6 @@ window.addEventListener("DOMContentLoaded", () =>{
     });
 
     document.addEventListener("click", ev => {
-        let operacion = document.getElementById("oper").value;
 
         if(ev.target.matches("#calcularPer")){
             let largo = document.getElementById("largo").value;
@@ -149,12 +113,6 @@ window.addEventListener("DOMContentLoaded", () =>{
         else if(ev.target.matches("#limpiarPer")){
             generar("inicial");
             limpiar();
-        }
-        else if(ev.target.matches("#limpiarCalcu")){
-            limpiarCalcu();
-        }
-        else if(ev.target.matches("#calcularCalcu")){
-            document.getElementById("resultCalcu").value = calcular(operacion);    
         }
     });
 });
