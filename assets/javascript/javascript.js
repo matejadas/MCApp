@@ -111,8 +111,8 @@ window.addEventListener("DOMContentLoaded", () =>{
             else generar("errorPer");
         }
         else if(ev.target.matches("#limpiarPer")){
-            generar("inicial");
             limpiar();
+            generar("inicial");
         }
     });
 });
