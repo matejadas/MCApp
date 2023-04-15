@@ -1,0 +1,39 @@
+@font-face {
+    font-family: digital7;
+    src: url(assets/fonts/digital-7/digital-7_mono.ttf);
+}
+
+@font-face {
+    font-family: minecraft;
+    src: url(assets/fonts/minecraft/minecraft.ttf);
+}
+
+body{
+    background-color: #1e1e1e;
+    color: #eeeeee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family: minecraft;
+    font-weight: normal;
+}
+
+#hora, #fecha{
+    font-family: digital7, Consolas, 'Courier New', Courier, monospace;
+    color: red;
+    font-size: 3em;
+}
+
+#coordenadas {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#coordenadas h1 {
+    grid-column: 1 / span 2;
+}
+
+.input {
+    width: 8em;
+}
