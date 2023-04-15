@@ -75,7 +75,6 @@ window.addEventListener("DOMContentLoaded", () =>{
     // Acciones
     setInterval(mostrarHora, 100);
     mostrarHora();
-
     generar("inicial");
 
     // Eventos
