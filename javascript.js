@@ -23,8 +23,6 @@ window.addEventListener("DOMContentLoaded", () =>{
     const perimetro = (v1, v2) => ((v1*2) + (v2*2)) - 4;
     const area = (v1, v2) => v1*v2;
 
-
-
     function limpiar(){
         document.getElementById("largo").value = "";
         document.getElementById("ancho").value = "";

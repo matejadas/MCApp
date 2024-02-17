@@ -12,6 +12,26 @@ body{
     background-color: #1e1e1e;
     color: #eeeeee;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    #section {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1368px) {
+    #section {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 1369px) {
+    #section {
+        width: 50%;
+    }
 }
 
 h1 {
@@ -28,12 +48,45 @@ h1 {
 #coordenadas {
     display: grid;
     grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
 }
 
-#coordenadas h1 {
+#coordenadas > h1 {
     grid-column: 1 / span 2;
 }
 
-.input {
-    width: 8em;
+#overworld, #nether {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 5px;
+}
+
+#overworld > .tag {
+    grid-column: 1 / span 4;
+}
+
+#overworld > .input {
+    grid-column: 2 / span 3;
+}
+
+#nether > .tag {
+    grid-column: 1 / span 4;
+}
+
+#nether > .input {
+    grid-column: 2 / span 3;
+}
+
+#contPerim {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto;
+    row-gap: 5px;
+}
+
+#contPerim > .input {
+    grid-column: 2 / span 2;
 }

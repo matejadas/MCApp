@@ -7,36 +7,45 @@
     <title>Utilidades Minecraft</title>
 </head>
 <body>
-    <div id="fecha"></div>
-    <div id="hora"></div>
-    <div id="coordenadas">
-        <h1>Coordenadas</h1>
-        <div id="overworld">
-            <p class="tag">Overworld:</p>
-            <div class="tagX">X: <input type="number" id="owx" class="input"></div>
-            <div class="tagY">Y: <input type="number" id="owy" class="input"></div>
-            <div class="tagZ">Z: <input type="number" id="owz" class="input"></div>
-        </div>
-        <div id="nether">
-            <p class="tag">Nether:</p>
-            <div class="tagX">X: <input type="number" id="nx" class="input"></div>
-            <div class="tagY">Y: <input type="number" id="ny" class="input"></div>
-            <div class="tagZ">Z: <input type="number" id="nz" class="input"></div>
-        </div>
-    </div>
-    <div id="perimetro">
-        <h1>Perímetro</h1>
-        <p>Para los perímetros y las áreas se supone un área rectangular o cuadrada.</p>
-        <div id="contPerim">
-            <div class="grid-item">Largo: <input type="number" id="largo" class="input"></div>
-            <div class="grid-item">Ancho: <input type="number" id="ancho" class="input"></div>
-            <div class="grid-item">
-                <input type="button" id="calcularPer" value="Calcular" class="btn-success">
-                <input type="button" id="limpiarPer" value="Limpiar" class="btn-warning">
+    <section id="contenido">
+        <div id="fecha"></div>
+        <div id="hora"></div>
+        <div id="coordenadas">
+            <h1>Coordenadas</h1>
+            <div id="overworld">
+                <p class="tag">Overworld:</p>
+                <label for="owx">X:</label>
+                <input type="number" id="owx" class="input">
+                <label for="owy">Y:</label>
+                <input type="number" id="owy" class="input">
+                <label for="owz">Z:</label>
+                <input type="number" id="owz" class="input">
             </div>
-            <div id="result"></div>
+            <div id="nether">
+                <p class="tag">Nether:</p>
+                <label for="nx">X:</label>
+                <input type="number" id="nx" class="input">
+                <label for="ny">Y:</label>
+                <input type="number" id="ny" class="input">
+                <label for="nz">Z:</label>
+                <input type="number" id="nz" class="input">
+            </div>
         </div>
-    </div>
+        <div id="perimetro">
+            <h1>Perímetro</h1>
+            <p>Para los perímetros y las áreas se supone un área rectangular o cuadrada.</p>
+            <div id="contPerim">                
+                <label for="largo" class="item">Largo:</label>
+                <input type="number" id="largo" class="input item">
+                <input type="button" id="calcularPer" value="Calcular" class="item">
+                <label for="ancho" class="item">Ancho:</label>
+                <input type="number" id="ancho" class="input item">
+                <input type="button" id="limpiarPer" value="Limpiar" class="item">
+            </div>
+                <div id="result"></div>
+            </div>
+        </div>
+    </section>
     <script src="javascript.js"></script>
 </body>
 </html>
