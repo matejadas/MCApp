@@ -37,8 +37,7 @@ window.addEventListener("DOMContentLoaded", () =>{
                     "<p>Parámetros no válidos: largo y ancho han de ser mayores que 1.</p>";
                 break;
             default:
-                document.getElementById("result").innerHTML =
-                "";
+                document.getElementById("result").innerHTML = "";
                 document.getElementById("result").style.visibility = "hidden";
         }
     }
@@ -48,6 +47,7 @@ window.addEventListener("DOMContentLoaded", () =>{
         document.getElementById("ancho").value = "";
         document.getElementById("per").value = "";
         document.getElementById("area").value = "";
+        document.getElementById("result").innerHTML = "";
     }
     
     // Acciones
