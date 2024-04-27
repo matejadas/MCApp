@@ -45,8 +45,6 @@ window.addEventListener("DOMContentLoaded", () =>{
     function limpiar(){
         document.getElementById("largo").value = "";
         document.getElementById("ancho").value = "";
-        document.getElementById("per").value = "";
-        document.getElementById("area").value = "";
         document.getElementById("result").innerHTML = "";
     }
     
