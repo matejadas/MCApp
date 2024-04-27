@@ -23,6 +23,26 @@ window.addEventListener("DOMContentLoaded", () =>{
     const perimetro = (v1, v2) => ((v1*2) + (v2*2)) - 4;
     const area = (v1, v2) => v1*v2;
 
+    function MostrarPerimetro(estado, largo, ancho){
+        document.getElementById("result").style.visibility = "visible";
+
+        switch(estado){
+            case "ok":
+                document.getElementById("result").innerHTML = 
+                    "<p>Perímetro: <label id='resultPer'>" + perimetro(largo, ancho) + " bloques.</label></br>" +
+                    "Área: <label id='resultArea'>" + area(largo, ancho) + " bloques.</label></p>";
+                break;
+            case "error":
+                document.getElementById("result").innerHTML =
+                    "<p>Parámetros no válidos: largo y ancho han de ser mayores que 1.</p>";
+                break;
+            default:
+                document.getElementById("result").innerHTML =
+                "";
+                document.getElementById("result").style.visibility = "hidden";
+        }
+    }
+
     function limpiar(){
         document.getElementById("largo").value = "";
         document.getElementById("ancho").value = "";
@@ -33,6 +53,7 @@ window.addEventListener("DOMContentLoaded", () =>{
     // Acciones
     setInterval(mostrarHora, 100);
     mostrarHora();
+    MostrarPerimetro("nada");
 
     // Eventos
     document.addEventListener("input", ev => {
@@ -50,8 +71,8 @@ window.addEventListener("DOMContentLoaded", () =>{
             let largo = document.getElementById("largo").value;
             let ancho = document.getElementById("ancho").value;
 
-            if(largo > 1 && ancho > 1) generar("ok", largo, ancho);
-            else generar("errorPer");
+            if(largo > 1 && ancho > 1) MostrarPerimetro("ok", largo, ancho);
+            else MostrarPerimetro("errorPer");
         }
         else if(ev.target.matches("#limpiarPer")){
             limpiar();
