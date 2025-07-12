@@ -18,7 +18,14 @@ window.addEventListener("DOMContentLoaded", () =>{
         document.getElementById("hora").innerHTML = `${pad2(hora)}:${pad2(min)}:${pad2(sec)}`;
         document.getElementById("fecha").innerHTML = `${pad2(diaMes)} / ${pad2(mes)} / ${anno}`;
     };
-    const dividirCoord = (valor) => Math.round(Number(valor)/8);
+    const dividirCoord = (valor) => {
+        if (valor !== undefined && valor !== null){
+            console.log(valor);
+            Math.round(Number(valor)/8);
+        } else {
+            console.log("valor es undefined o null");
+        }
+    };
     const multiplicarCoord = (valor) => valor*8;
     const perimetro = (v1, v2) => ((v1*2) + (v2*2)) - 4;
     const area = (v1, v2) => v1*v2;
@@ -52,6 +59,8 @@ window.addEventListener("DOMContentLoaded", () =>{
     setInterval(mostrarHora, 100);
     mostrarHora();
     MostrarPerimetro("nada");
+
+    // TO-DO Poner flag para evitar recursividad -> ver chatGPT
 
     // Eventos
     document.addEventListener("input", ev => {
